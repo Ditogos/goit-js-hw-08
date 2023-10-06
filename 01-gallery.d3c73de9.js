@@ -22,6 +22,6 @@ this.off(["close."+this.eventNamespace,"closed."+this.eventNamespace,"nextImageL
           alt="${t.description}"
         />
       </a>
-    </li>`).join("");c.innerHTML=h,c.addEventListener("click",function(t){if(t.preventDefault(),"IMG"!==t.target.nodeName)return}),new(o&&o.__esModule?o.default:o)(".gallery a",{captionsData:"alt",captionsDelay:300})}();//# sourceMappingURL=01-gallery.312f2cc0.js.map
+    </li>`).join("");c.innerHTML=h,new(o&&o.__esModule?o.default:o)(".gallery a",{captionsData:"alt",captionsDelay:300})}();//# sourceMappingURL=01-gallery.d3c73de9.js.map
 
-//# sourceMappingURL=01-gallery.312f2cc0.js.map
+//# sourceMappingURL=01-gallery.d3c73de9.js.map

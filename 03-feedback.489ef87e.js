@@ -1,4 +1,4 @@
-var e,t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},n={},i="Expected a function",o=0/0,r=/^\s+|\s+$/g,a=/^[-+]0x[0-9a-f]+$/i,u=/^0b[01]+$/i,f=/^0o[0-7]+$/i,l=parseInt,c="object"==typeof t&&t&&t.Object===Object&&t,s="object"==typeof self&&self&&self.Object===Object&&self,d=c||s||Function("return this")(),v=Object.prototype.toString,m=Math.max,p=Math.min,g=function(){return d.Date.now()};/**
+!function(){var e,t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{},n={},i="Expected a function",o=0/0,r=/^\s+|\s+$/g,f=/^[-+]0x[0-9a-f]+$/i,a=/^0b[01]+$/i,u=/^0o[0-7]+$/i,l=parseInt,c="object"==typeof t&&t&&t.Object===Object&&t,s="object"==typeof self&&self&&self.Object===Object&&self,d=c||s||Function("return this")(),g=Object.prototype.toString,v=Math.max,p=Math.min,m=function(){return d.Date.now()};/**
  * Checks if `value` is the
  * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
  * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
@@ -44,7 +44,7 @@ var e,t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:
  *
  * _.toNumber('3.2');
  * // => 3.2
- */function b(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==v.call(t))return o;if(y(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=y(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(r,"");var i=u.test(e);return i||f.test(e)?l(e.slice(2),i?2:8):a.test(e)?o:+e}n=/**
+ */function b(e){if("number"==typeof e)return e;if("symbol"==typeof(t=e)||t&&"object"==typeof t&&"[object Symbol]"==g.call(t))return o;if(y(e)){var t,n="function"==typeof e.valueOf?e.valueOf():e;e=y(n)?n+"":n}if("string"!=typeof e)return 0===e?e:+e;e=e.replace(r,"");var i=a.test(e);return i||u.test(e)?l(e.slice(2),i?2:8):f.test(e)?o:+e}n=/**
  * Creates a throttled function that only invokes `func` at most once per
  * every `wait` milliseconds. The throttled function comes with a `cancel`
  * method to cancel delayed `func` invocations and a `flush` method to
@@ -140,15 +140,15 @@ var e,t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:
  *
  * // Cancel the trailing debounced invocation.
  * jQuery(window).on('popstate', debounced.cancel);
- */function(e,t,n){var o,r,a,u,f,l,c=0,s=!1,d=!1,v=!0;if("function"!=typeof e)throw TypeError(i);function j(t){var n=o,i=r;return o=r=void 0,c=t,u=e.apply(i,n)}function S(e){var n=e-l,i=e-c;// Either this is the first call, activity has stopped and we're at the
+ */function(e,t,n){var o,r,f,a,u,l,c=0,s=!1,d=!1,g=!0;if("function"!=typeof e)throw TypeError(i);function h(t){var n=o,i=r;return o=r=void 0,c=t,a=e.apply(i,n)}function j(e){var n=e-l,i=e-c;// Either this is the first call, activity has stopped and we're at the
 // trailing edge, the system time has gone backwards and we're treating
 // it as the trailing edge, or we've hit the `maxWait` limit.
-return void 0===l||n>=t||n<0||d&&i>=a}function h(){var e,n,i,o=g();if(S(o))return O(o);// Restart the timer.
-f=setTimeout(h,(e=o-l,n=o-c,i=t-e,d?p(i,a-n):i))}function O(e){return(// Only invoke if we have `lastArgs` which means `func` has been
+return void 0===l||n>=t||n<0||d&&i>=f}function O(){var e,n,i,o=m();if(j(o))return T(o);// Restart the timer.
+u=setTimeout(O,(e=o-l,n=o-c,i=t-e,d?p(i,f-n):i))}function T(e){return(// Only invoke if we have `lastArgs` which means `func` has been
 // debounced at least once.
-(f=void 0,v&&o)?j(e):(o=r=void 0,u))}function T(){var e,n=g(),i=S(n);if(o=arguments,r=this,l=n,i){if(void 0===f)return(// Reset any `maxWait` timer.
+(u=void 0,g&&o)?h(e):(o=r=void 0,a))}function S(){var e,n=m(),i=j(n);if(o=arguments,r=this,l=n,i){if(void 0===u)return(// Reset any `maxWait` timer.
 c=e=l,// Start the timer for the trailing edge.
-f=setTimeout(h,t),s?j(e):u);if(d)return(// Handle invocations in a tight loop.
-f=setTimeout(h,t),j(l))}return void 0===f&&(f=setTimeout(h,t)),u}return t=b(t)||0,y(n)&&(s=!!n.leading,a=(d="maxWait"in n)?m(b(n.maxWait)||0,t):a,v="trailing"in n?!!n.trailing:v),T.cancel=function(){void 0!==f&&clearTimeout(f),c=0,o=l=r=f=void 0},T.flush=function(){return void 0===f?u:O(g())},T}(e,t,{leading:o,maxWait:t,trailing:r})};const j=document.querySelector(".feedback-form"),S=j.querySelector('input[name="email"]'),h=j.querySelector('textarea[name="message"]'),O="feedback-form-state";j.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(){let e={email:S.value,message:h.value};localStorage.setItem(O,JSON.stringify(e))},500)),j.addEventListener("submit",function(e){e.preventDefault();let t={email:S.value,message:h.value};console.log(t),localStorage.removeItem(O),S.value="",h.value=""}),function(){let e=localStorage.getItem(O);if(e){let t=JSON.parse(e);S.value=t.email,h.value=t.message}}();//# sourceMappingURL=03-feedback.c4678c2e.js.map
+u=setTimeout(O,t),s?h(e):a);if(d)return(// Handle invocations in a tight loop.
+u=setTimeout(O,t),h(l))}return void 0===u&&(u=setTimeout(O,t)),a}return t=b(t)||0,y(n)&&(s=!!n.leading,f=(d="maxWait"in n)?v(b(n.maxWait)||0,t):f,g="trailing"in n?!!n.trailing:g),S.cancel=function(){void 0!==u&&clearTimeout(u),c=0,o=l=r=u=void 0},S.flush=function(){return void 0===u?a:T(m())},S}(e,t,{leading:o,maxWait:t,trailing:r})};let h=document.querySelector(".feedback-form"),j="feedback-form-state",O={};h.addEventListener("input",((e=n)&&e.__esModule?e.default:e)(function(e){O[e.target.name]=e.target.value.trim(),localStorage.setItem(j,JSON.stringify(O))},500)),h.addEventListener("submit",function(e){e.preventDefault(),console.log(O),localStorage.removeItem(j),e.target.reset()}),function(){try{let e=localStorage.getItem(j);e&&(O=JSON.parse(e),Object.entries(O).forEach(([e,t])=>{h.elements[e].value=t}))}catch({message:e}){console.log(e)}}()}();//# sourceMappingURL=03-feedback.489ef87e.js.map
 
-//# sourceMappingURL=03-feedback.c4678c2e.js.map
+//# sourceMappingURL=03-feedback.489ef87e.js.map
