@@ -29,15 +29,6 @@ const addGalleryMarkup = getGallery(galleryItems);
 
 imageUrl.innerHTML = addGalleryMarkup;
 
-imageUrl.addEventListener('click', imageClick);
-function imageClick(evt) {
-  evt.preventDefault();
-
-  if (evt.target.nodeName !== 'IMG') {
-    return;
-  }
-}
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionsDelay: 300,
