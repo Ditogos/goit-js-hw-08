@@ -372,48 +372,6 @@ u=setTimeout(v,(e=o-c,n=o-l,r=t-e,f?el(r,i-n):r))}function y(e){return(// Only i
 (u=void 0,d&&r)?h(e):(r=o=void 0,a))}function m(){var e,n=es(),i=p(n);if(r=arguments,o=this,c=n,i){if(void 0===u)return(// Reset any `maxWait` timer.
 l=e=c,// Start the timer for the trailing edge.
 u=setTimeout(v,t),s?h(e):a);if(f)return(// Handle invocations in a tight loop.
-u=setTimeout(v,t),h(c))}return void 0===u&&(u=setTimeout(v,t)),a}return t=ed(t)||0,ef(n)&&(s=!!n.leading,i=(f="maxWait"in n)?ec(ed(n.maxWait)||0,t):i,d="trailing"in n?!!n.trailing:d),m.cancel=function(){void 0!==u&&clearTimeout(u),l=0,r=c=o=u=void 0},m.flush=function(){return void 0===u?a:y(es())},m}(e,t,{leading:r,maxWait:t,trailing:o})};let eh=document.getElementById("vimeo-player"),ep=new Q(eh);ep.setCurrentTime(function(){let e=localStorage.getItem("localStorageKey");return e?JSON.parse(e):0}()),ep.on("timeupdate",((a=J)&&a.__esModule?a.default:a)(e=>{var t;t=e.seconds,localStorage.setItem("localStorageKey",JSON.stringify(t))},1e3));// player.on('play', function () {
-//   player.getVideoTitle().then(function (title) {
-//     const currentTime = localStorage.getItem(LOCAL_KEY) || 0;
-//     console.log('Video Title', title);
-//     console.log('Curent time', currentTime);
-//   });
-// });
-//   const throtledUpdateStorage = throttle(updateLocalStorage, 1000);
-//   throtledUpdateStorage(curentTimeData);
-// };
-// player.on('play', onPlay);
-// const updateLocalStorage = function (data) {
-//   localStorage.setItem('videoplayer-current-time', JSON.stringify(data));
-// };
-// const storedData = localStorage.getItem('videoplayer-current-time');
-// if (storedData) {
-//   const currentTimeData = JSON.parse(storedData);
-//   const { seconds } = currentTimeData;
-// player
-//   .setCurrentTime(seconds)
-//   .then(function (newSeconds) {
-//     console.log('Pozition video: ', newSeconds, 'sekonds');
-//   })
-//   .catch(function (error) {
-//     switch (error.name) {
-//       case 'RangeError':
-//         console.error(
-//           'The time was less than 0 or more than the duration of the video'
-//         );
-//         break;
-//       default:
-//         console.error('Happend another error', error);
-//         break;
-//     }
-//   });
-// const player = new Player('vimeo-player', {
-//   id: 19231868,
-//   width: 640,
-// });
-// player.on('play', function () {
-//   console.log('played the video!');
-// });
-}();//# sourceMappingURL=02-video.76441869.js.map
+u=setTimeout(v,t),h(c))}return void 0===u&&(u=setTimeout(v,t)),a}return t=ed(t)||0,ef(n)&&(s=!!n.leading,i=(f="maxWait"in n)?ec(ed(n.maxWait)||0,t):i,d="trailing"in n?!!n.trailing:d),m.cancel=function(){void 0!==u&&clearTimeout(u),l=0,r=c=o=u=void 0},m.flush=function(){return void 0===u?a:y(es())},m}(e,t,{leading:r,maxWait:t,trailing:o})};let eh=document.getElementById("vimeo-player"),ep=new Q(eh);ep.setCurrentTime(function(){let e=localStorage.getItem("localStorageKey");return e?JSON.parse(e):0}()),ep.on("timeupdate",((a=J)&&a.__esModule?a.default:a)(e=>{var t;t=e.seconds,localStorage.setItem("localStorageKey",JSON.stringify(t))},1e3))}();//# sourceMappingURL=02-video.7b6c8871.js.map
 
-//# sourceMappingURL=02-video.76441869.js.map
+//# sourceMappingURL=02-video.7b6c8871.js.map
